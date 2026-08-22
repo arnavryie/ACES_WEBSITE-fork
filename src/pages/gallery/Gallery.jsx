@@ -175,8 +175,8 @@ export default function Gallery({ embedded = false }) {
           style={{ background: 'transparent' }}
         />
 
-        {/* Marquee Background Container (Colorful, High Opacity) */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none opacity-95 select-none">
+        {/* Marquee Background Container (Colorful with 15% Transparency) */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none opacity-85 select-none">
           {/* Mobile / Tablet: 2 Synchronized Columns */}
           <div className="flex xl:hidden gap-4 sm:gap-6 h-[200%] w-full">
             <div className="flex-1 overflow-hidden">
@@ -247,8 +247,8 @@ export default function Gallery({ embedded = false }) {
           </div>
         </div>
 
-        {/* Minimal 5% Overlay Tint to preserve photo vibrancy */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FFF4F2]/10 via-transparent to-[#FFF4F2]/15 pointer-events-none" />
+        {/* 15% Soft Ambient Overlay Tint */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FFF4F2]/25 via-transparent to-[#FFF4F2]/30 pointer-events-none" />
 
         {/* Glassmorphism Hero Card (Large on Home, Sleek & Compact on Gallery page) */}
         <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 z-10">
