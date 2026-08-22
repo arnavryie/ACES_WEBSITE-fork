@@ -73,26 +73,12 @@ export default function GoldenMoments({ embedded = false }) {
         </div>
 
         {/* Carousel Viewport Container (Spans full viewport with middle desktop arrow buttons) */}
-        <div className="relative w-full flex flex-col items-center justify-center overflow-hidden py-2">
-
-          {/* Left fade-out gradient — dissolves left side card into page background */}
-          <div
-            aria-hidden="true"
-            className="absolute left-0 top-0 h-full w-[22%] sm:w-[18%] lg:w-[15%] pointer-events-none z-50"
-            style={{ background: 'linear-gradient(to right, #FFF4F2 0%, rgba(255,244,242,0.85) 40%, transparent 100%)' }}
-          />
-
-          {/* Right fade-out gradient — dissolves right side card into page background */}
-          <div
-            aria-hidden="true"
-            className="absolute right-0 top-0 h-full w-[22%] sm:w-[18%] lg:w-[15%] pointer-events-none z-50"
-            style={{ background: 'linear-gradient(to left, #FFF4F2 0%, rgba(255,244,242,0.85) 40%, transparent 100%)' }}
-          />
+        <div className="relative w-full flex flex-col items-center justify-center overflow-visible py-4">
           
           {/* Left Arrow Button (Only on PCs / Laptops, vertically centered at far left edge) */}
           <button
             onClick={handlePrev}
-            className="hidden md:flex absolute left-4 lg:left-10 xl:left-14 top-1/2 -translate-y-1/2 z-[60] w-14 h-14 bg-white/95 hover:bg-white text-near-black hover:text-primary rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-brand-glow border border-[#e8e6e1] hover:border-primary/50 transition-all duration-200 cursor-pointer items-center justify-center hover:scale-110 active:scale-95 backdrop-blur-md"
+            className="hidden md:flex absolute left-4 lg:left-10 xl:left-14 top-1/2 -translate-y-1/2 z-40 w-14 h-14 bg-white/95 hover:bg-white text-near-black hover:text-primary rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-brand-glow border border-[#e8e6e1] hover:border-primary/50 transition-all duration-200 cursor-pointer items-center justify-center hover:scale-110 active:scale-95 backdrop-blur-md"
             aria-label="Previous milestone"
           >
             <ChevronLeft className="w-7 h-7" />
@@ -101,14 +87,14 @@ export default function GoldenMoments({ embedded = false }) {
           {/* Right Arrow Button (Only on PCs / Laptops, vertically centered at far right edge) */}
           <button
             onClick={handleNext}
-            className="hidden md:flex absolute right-4 lg:right-10 xl:right-14 top-1/2 -translate-y-1/2 z-[60] w-14 h-14 bg-white/95 hover:bg-white text-near-black hover:text-primary rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-brand-glow border border-[#e8e6e1] hover:border-primary/50 transition-all duration-200 cursor-pointer items-center justify-center hover:scale-110 active:scale-95 backdrop-blur-md"
+            className="hidden md:flex absolute right-4 lg:right-10 xl:right-14 top-1/2 -translate-y-1/2 z-40 w-14 h-14 bg-white/95 hover:bg-white text-near-black hover:text-primary rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-brand-glow border border-[#e8e6e1] hover:border-primary/50 transition-all duration-200 cursor-pointer items-center justify-center hover:scale-110 active:scale-95 backdrop-blur-md"
             aria-label="Next milestone"
           >
             <ChevronRight className="w-7 h-7" />
           </button>
 
           {/* Swiper Animated Track */}
-          <div className="relative w-full h-[640px] sm:h-[700px] lg:h-[760px] flex items-center justify-center [perspective:1400px]">
+          <div className="relative w-full h-[660px] sm:h-[720px] lg:h-[780px] flex items-center justify-center [perspective:1400px] overflow-visible">
             
             <motion.div
               drag="x"
@@ -147,7 +133,7 @@ export default function GoldenMoments({ embedded = false }) {
                     }}
                     className={`absolute w-[88vw] max-w-[360px] sm:w-[420px] md:w-[450px] lg:w-[480px] h-[600px] sm:h-[660px] lg:h-[720px] flex-shrink-0 cursor-pointer rounded-[32px] overflow-hidden border bg-white p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                       isCenter 
-                        ? 'shadow-[0_24px_70px_rgba(178,43,47,0.24),0_6px_20px_rgba(0,0,0,0.08)] border-primary/50' 
+                        ? 'shadow-[0_20px_50px_rgba(178,43,47,0.18),0_6px_20px_rgba(0,0,0,0.06)] border-primary/50' 
                         : 'shadow-[0_12px_36px_rgba(0,0,0,0.08)] border-[#e8e6e1]'
                     }`}
                   >

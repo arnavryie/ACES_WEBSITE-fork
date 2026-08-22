@@ -58,15 +58,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#FFF4F2] relative">
-      {/* One continuous ambient warm glow across the entire page - no section cutoffs */}
-      <div 
-        className="fixed inset-0 w-full h-full pointer-events-none" 
-        style={{ 
-          background: 'radial-gradient(ellipse 120% 60% at 50% 30%, rgba(209,165,80,0.18) 0%, rgba(178,43,47,0.08) 45%, transparent 75%)',
-          zIndex: 0
-        }}
-      />
+    <div className="min-h-screen overflow-x-hidden bg-[#FFF4F2]">
       {/* ─── 1. Home / Hero Section (Color: #FFF4F2) ─── */}
       <section id="home" className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden scroll-mt-20">
         {/* ShapeGrid Background Layer */}
