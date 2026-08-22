@@ -59,9 +59,11 @@ export default function GoldenMoments({ embedded = false }) {
         
         {/* Header Title */}
         <div className="text-center space-y-2 px-4 reveal-heading max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-primary text-white px-4 py-1.5 rounded-[4px] text-xs font-bold tracking-widest uppercase shadow-brand-glow">
-            <Award className="w-3.5 h-3.5" /> Landmark Milestones
-          </div>
+          {!embedded && (
+            <div className="inline-flex items-center gap-2 bg-primary text-white px-4 py-1.5 rounded-[4px] text-xs font-bold tracking-widest uppercase shadow-brand-glow">
+              <Award className="w-3.5 h-3.5" /> Landmark Milestones
+            </div>
+          )}
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black uppercase text-gradient-brand tracking-tight">
             Golden Moments
           </h1>

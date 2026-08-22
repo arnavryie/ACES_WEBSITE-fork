@@ -94,13 +94,6 @@ export default function Home() {
           animate="visible"
           className="max-w-6xl mx-auto text-center space-y-8 relative z-10"
         >
-          {/* Badge Pill */}
-          <motion.div variants={heroItem}>
-            <div className="inline-flex items-center gap-2 bg-primary text-white text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-[4px] shadow-brand-glow">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Official Student Body • Computer Engineering</span>
-            </div>
-          </motion.div>
 
           {/* Main Headline */}
           <motion.h1

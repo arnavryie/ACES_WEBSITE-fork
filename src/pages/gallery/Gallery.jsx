@@ -167,7 +167,7 @@ export default function Gallery({ embedded = false }) {
       {/* SECTION 1: HERO SHOWCASE (Full-Screen Marquee Background + Glassmorphism Center Card) */}
       <section 
         ref={heroRef}
-        className={`relative ${embedded ? 'h-screen' : 'h-screen mt-4'} overflow-hidden flex items-center justify-center`}
+        className={`relative ${embedded ? 'h-screen' : 'h-[340px] sm:h-[400px] mt-4'} overflow-hidden flex items-center justify-center`}
       >
         {/* Ambient Glow (handled by parent page) */}
         <div 
@@ -254,10 +254,12 @@ export default function Gallery({ embedded = false }) {
         <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 z-10">
           <div className="w-full max-w-2xl bg-white/95 border border-muted/50 rounded-[16px] p-7 sm:p-10 md:p-12 text-center space-y-4 sm:space-y-6 shadow-2xl backdrop-blur-md">
             {/* Secondary Accent Badge */}
-            <div className="inline-flex items-center gap-2 bg-secondary/15 border border-secondary/40 text-secondary px-4 py-1.5 rounded-[4px] text-xs font-bold tracking-widest uppercase shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-secondary" />
-              <span>ACES Archives & Memories</span>
-            </div>
+            {!embedded && (
+              <div className="inline-flex items-center gap-2 bg-secondary/15 border border-secondary/40 text-secondary px-4 py-1.5 rounded-[4px] text-xs font-bold tracking-widest uppercase shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-secondary" />
+                <span>ACES Archives & Memories</span>
+              </div>
+            )}
 
             {/* Main Headline */}
             <h1 className="font-display text-2xl sm:text-4xl lg:text-5xl font-black uppercase text-primary tracking-tight leading-tight">
