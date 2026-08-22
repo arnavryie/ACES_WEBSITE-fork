@@ -30,13 +30,16 @@ const ShapeGrid = ({
     const hexVert = squareSize * Math.sqrt(3);
 
     const resizeCanvas = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
+      if (!canvas) return;
+      canvas.width = canvas.offsetWidth || window.innerWidth;
+      canvas.height = canvas.offsetHeight || window.innerHeight;
       numSquaresX.current = Math.ceil(canvas.width / squareSize) + 1;
       numSquaresY.current = Math.ceil(canvas.height / squareSize) + 1;
     };
 
     window.addEventListener('resize', resizeCanvas);
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(resizeCanvas) : null;
+    if (ro && canvas) ro.observe(canvas);
     resizeCanvas();
 
     const drawHex = (cx, cy, size) => {
@@ -405,6 +408,7 @@ const ShapeGrid = ({
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      if (ro) ro.disconnect();
       tryStop();
       io.disconnect();
       document.removeEventListener('visibilitychange', onVisibility);

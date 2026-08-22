@@ -59,8 +59,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#FFF4F2]">
-      {/* ─── 1. Home / Hero Section (Color: #FFF4F2) ─── */}
-      <section id="home" className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden scroll-mt-20">
+      {/* ─── 1. Home / Hero Section (Color: #FFF4F2, 100% Full Viewport Coverage) ─── */}
+      <section id="home" className="relative min-h-screen flex flex-col justify-center pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden scroll-mt-20">
         {/* ShapeGrid Background Layer (Full Section Grid Coverage) */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <ShapeGrid
