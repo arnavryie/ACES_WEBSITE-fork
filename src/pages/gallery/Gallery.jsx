@@ -164,10 +164,10 @@ export default function Gallery({ embedded = false }) {
         }
       `}</style>
 
-      {/* SECTION 1: HERO SHOWCASE (Full-Screen Marquee Background + Glassmorphism Center Card) */}
+      {/* SECTION 1: HERO SHOWCASE (Full-Screen on Home, Compact & Sleek on Standalone Gallery Page) */}
       <section 
         ref={heroRef}
-        className={`relative ${embedded ? 'h-screen' : 'h-screen min-h-[640px] sm:min-h-[720px]'} overflow-hidden flex items-center justify-center`}
+        className={`relative ${embedded ? 'h-screen' : 'h-[500px] sm:h-[550px] lg:h-[590px] pt-14 sm:pt-16'} overflow-hidden flex items-center justify-center`}
       >
         {/* Ambient Glow (handled by parent page) */}
         <div 
@@ -250,33 +250,33 @@ export default function Gallery({ embedded = false }) {
         {/* Minimal 5% Overlay Tint to preserve photo vibrancy */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FFF4F2]/10 via-transparent to-[#FFF4F2]/15 pointer-events-none" />
 
-        {/* Expanded Glassmorphism Hero Card */}
+        {/* Glassmorphism Hero Card (Large on Home, Sleek & Compact on Gallery page) */}
         <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 z-10">
-          <div className="w-full max-w-2xl bg-white/95 border border-muted/50 rounded-[16px] p-7 sm:p-10 md:p-12 text-center space-y-4 sm:space-y-6 shadow-2xl backdrop-blur-md">
+          <div className={`w-full ${embedded ? 'max-w-2xl p-7 sm:p-10 md:p-12 space-y-4 sm:space-y-6' : 'max-w-xl p-5 sm:p-7 md:p-8 space-y-3 sm:space-y-4 mt-6'} bg-white/95 border border-muted/50 rounded-[16px] text-center shadow-2xl backdrop-blur-md`}>
             {/* Secondary Accent Badge */}
             {!embedded && (
-              <div className="inline-flex items-center gap-2 bg-secondary/15 border border-secondary/40 text-secondary px-4 py-1.5 rounded-[4px] text-xs font-bold tracking-widest uppercase shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-secondary" />
+              <div className="inline-flex items-center gap-1.5 bg-secondary/15 border border-secondary/40 text-secondary px-3.5 py-1 rounded-[4px] text-[11px] sm:text-xs font-bold tracking-widest uppercase shadow-sm">
+                <Sparkles className="w-3 h-3 text-secondary" />
                 <span>ACES Archives & Memories</span>
               </div>
             )}
 
             {/* Main Headline */}
-            <h1 className="font-display text-2xl sm:text-4xl lg:text-5xl font-black uppercase text-primary tracking-tight leading-tight">
+            <h1 className={`font-display ${embedded ? 'text-2xl sm:text-4xl lg:text-5xl' : 'text-xl sm:text-3xl lg:text-4xl'} font-black uppercase text-primary tracking-tight leading-tight`}>
               Capturing Moments, <br className="hidden sm:inline" /><span className="text-secondary">Coding History</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-body text-xs sm:text-sm md:text-base leading-relaxed max-w-lg mx-auto font-medium">
+            <p className={`text-body ${embedded ? 'text-xs sm:text-sm md:text-base' : 'text-xs sm:text-sm'} leading-relaxed max-w-lg mx-auto font-medium`}>
               Explore the rich history of technical workshops, national hackathons, cultural festivals, and student leadership at DIT Pune.
             </p>
 
             {/* Action CTA */}
-            <div className="pt-2">
+            <div className="pt-1">
               <button
                 type="button"
                 onClick={handleCtaClick}
-                className="inline-flex items-center gap-2.5 bg-primary hover:bg-primary/90 text-white font-bold text-xs sm:text-sm tracking-wider uppercase px-8 py-3.5 rounded-[6px] transition-all cursor-pointer shadow-brand-glow group"
+                className={`inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold ${embedded ? 'text-xs sm:text-sm px-8 py-3.5' : 'text-xs px-6 py-2.5'} tracking-wider uppercase rounded-[6px] transition-all cursor-pointer shadow-brand-glow group`}
               >
                 <span>Explore Full Gallery</span>
                 {embedded ? (
