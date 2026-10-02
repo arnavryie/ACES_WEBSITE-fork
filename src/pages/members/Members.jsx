@@ -38,6 +38,7 @@ export default function Members({ embedded = false }) {
 
           {/* Bottom Call to Action Button */}
           <div className="pt-6 flex justify-center reveal">
+            {/* 
             <button 
               onClick={() => {
                 navigate('/members');
@@ -48,6 +49,7 @@ export default function Members({ embedded = false }) {
               <span>Explore Members Directory</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
+            */}
           </div>
 
         </div>

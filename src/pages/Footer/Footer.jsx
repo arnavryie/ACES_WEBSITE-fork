@@ -87,7 +87,6 @@ export default function Footer() {
         <div className="footer-column">
           <h3 className="footer-column-title">Other Links</h3>
           <ul>
-
             <li>
               <a href="#">Privacy Policy</a>
             </li>

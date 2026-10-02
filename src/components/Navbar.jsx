@@ -11,6 +11,7 @@ const MENU_ITEMS = [
   { id: 'golden-moments', label: 'Golden Moments', path: '/golden-moments' },
   { id: 'gallery', label: 'Gallery', path: '/gallery' },
   { id: 'social', label: 'Social', path: '/social' },
+  { id: 'members', label: 'Members', path: '/members' },
 ];
 
 export default function Navbar() {
@@ -92,8 +93,8 @@ export default function Navbar() {
       }
     }
 
-    // When on dedicated pages (/members or /gallery):
-    if (item.id === 'gallery' || item.id === 'members') {
+    // When on dedicated pages (/gallery):
+    if (item.id === 'gallery') {
       if (location.pathname === item.path) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
