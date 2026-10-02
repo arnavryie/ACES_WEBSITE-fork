@@ -382,7 +382,7 @@ export const members = [
     branch: "Computer Engineering",
     year: "SE",
     image: "https://ui-avatars.com/api/?name=Arnav+Tagade&background=111&color=fff&size=400&bold=true",
-    bio: "Passionate about competitive programming, building scalable distributed systems, and modern software architectures, Professional Stoner.",
+    bio: "Passionate about competitive programming, building scalable distributed systems, and modern software architectures.",
     responsibilities: [
       "Algorithm Design",
       "Technical Problem Solving",
