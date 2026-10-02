@@ -2,7 +2,7 @@ export const goldenMoments = [
   {
     id: "gm-1",
     eventName: "Acunetix",
-    title: "Acunetix National Tech Symposium",
+    title: "Acunetix",
     year: "2026",
     description: "State-level technical showdown featuring coding olympiads, robotics arena battles, and hardware innovation showcases.",
     image: "/images/golden-moments/gm-acunetix-symposium.jpg"
@@ -34,7 +34,7 @@ export const goldenMoments = [
   {
     id: "gm-5",
     eventName: "Acunetix",
-    title: "Robotics & Hardware Expo",
+    title: "SIH",
     year: "2026",
     description: "Autonomous bots, embedded IoT systems, and innovative engineering capstone projects on live display.",
     image: "/images/golden-moments/gm-acunetix-expo.jpg"
@@ -42,7 +42,7 @@ export const goldenMoments = [
   {
     id: "gm-6",
     eventName: "Hackathon",
-    title: "Midnight Sprint & Deployment",
+    title: "Hacktober / HackSeries 3.0",
     year: "2026",
     description: "Engineering squads collaborating late into the night, pushing commits, and testing neural model integrations.",
     image: "/images/golden-moments/gm-hackathon-sprint.jpg"

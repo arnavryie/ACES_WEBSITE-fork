@@ -271,9 +271,6 @@ export default function Social({ embedded = false }) {
                       </div>
 
                       <div className="flex items-center gap-1.5">
-                        <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-[#F9EFE6] text-[#A67C2E] border border-[#ECD9C6] px-2.5 py-1 rounded-[4px]">
-                          {item.tag || item.category}
-                        </span>
                         {isCenter && (
                           <span className="text-primary/70 text-[10px] font-bold flex items-center gap-0.5">
                             <ExternalLink className="w-3 h-3" />

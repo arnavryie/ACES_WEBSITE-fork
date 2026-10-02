@@ -36,8 +36,6 @@ export default function Home() {
       {/* ─── Social Highlights Section ─── */}
       <Social embedded={true} />
 
-      {/* ─── Members Directory Preview Section ─── */}
-      <Members embedded={true} />
 
       {/* ─── Contact Us Section ─── */}
       <ContactUs />
