@@ -15,8 +15,10 @@ export default function Social({ embedded = false }) {
   const [activeReelIndex, setActiveReelIndex] = useState(0);
   const [activePostIndex, setActivePostIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
   
+  const sectionRef = useRef(null);
   const videoRefs = useRef([]);
 
   const activeList = activeTab === 'reels' ? REELS_DATA : POSTS_DATA;
@@ -40,9 +42,76 @@ export default function Social({ embedded = false }) {
     };
   }, []);
 
-  // Play visible reel cards, pause far-off cards to preserve performance
+  // Monitor visibility of the reels/social section in the viewport
+  // If not visible (even a small part is not visible), automatically mute audio and pause
   useEffect(() => {
-    if (activeTab !== 'reels') return;
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const visible = entry.isIntersecting;
+        setIsSectionVisible(visible);
+        if (!visible) {
+          setIsMuted(true);
+          videoRefs.current.forEach((videoEl) => {
+            if (videoEl) {
+              videoEl.muted = true;
+              if (!videoEl.paused) videoEl.pause();
+            }
+          });
+        }
+      },
+      {
+        threshold: 0, // Triggers as soon as even 1px enters or leaves viewport
+      }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  // Handle browser tab switching / minimizing
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        setIsMuted(true);
+        videoRefs.current.forEach((videoEl) => {
+          if (videoEl) {
+            videoEl.muted = true;
+            if (!videoEl.paused) videoEl.pause();
+          }
+        });
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, []);
+
+  // Cleanup all videos on unmount
+  useEffect(() => {
+    return () => {
+      videoRefs.current.forEach((videoEl) => {
+        if (videoEl) {
+          videoEl.muted = true;
+          if (!videoEl.paused) videoEl.pause();
+        }
+      });
+    };
+  }, []);
+
+  // Play visible reel cards, pause far-off cards or when section is not visible
+  useEffect(() => {
+    if (activeTab !== 'reels' || !isSectionVisible) {
+      videoRefs.current.forEach((videoEl) => {
+        if (videoEl) {
+          videoEl.muted = true;
+          if (!videoEl.paused) videoEl.pause();
+        }
+      });
+      return;
+    }
     
     videoRefs.current.forEach((videoEl, idx) => {
       if (!videoEl) return;
@@ -69,13 +138,15 @@ export default function Social({ embedded = false }) {
         if (!videoEl.paused) videoEl.pause();
       }
     });
-  }, [activeTab, isMuted, activeReelIndex, total]);
+  }, [activeTab, isMuted, activeReelIndex, total, isSectionVisible]);
 
   // Sync muted state of center video
   useEffect(() => {
     const activeVideo = videoRefs.current[activeReelIndex];
-    if (activeVideo) activeVideo.muted = isMuted;
-  }, [isMuted, activeReelIndex]);
+    if (activeVideo) {
+      activeVideo.muted = !isSectionVisible || activeTab !== 'reels' ? true : isMuted;
+    }
+  }, [isMuted, activeReelIndex, isSectionVisible, activeTab]);
 
   const handleNext = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % total);
@@ -96,7 +167,25 @@ export default function Social({ embedded = false }) {
 
   const toggleMute = (e) => {
     e.stopPropagation();
-    setIsMuted((prev) => !prev);
+    setIsMuted((prev) => {
+      const next = !prev;
+      const activeVideo = videoRefs.current[activeReelIndex];
+      if (activeVideo) activeVideo.muted = next;
+      return next;
+    });
+  };
+
+  const handleTabSwitch = (tab) => {
+    if (tab !== 'reels') {
+      setIsMuted(true);
+      videoRefs.current.forEach((videoEl) => {
+        if (videoEl) {
+          videoEl.muted = true;
+          if (!videoEl.paused) videoEl.pause();
+        }
+      });
+    }
+    setActiveTab(tab);
   };
 
   const handleDragEnd = (_, info) => {
@@ -133,6 +222,7 @@ export default function Social({ embedded = false }) {
   return (
     <div
       id="social"
+      ref={sectionRef}
       className={`w-full ${
         embedded ? 'bg-gradient-to-b from-[#FFF4F2] via-[#FFF4F2] to-white pt-16 sm:pt-24 pb-16' : 'bg-[#FFF4F2] min-h-screen pt-28 sm:pt-36 pb-24'
       } px-0 flex flex-col justify-center items-center overflow-visible relative select-none`}
@@ -163,7 +253,7 @@ export default function Social({ embedded = false }) {
           <div className="inline-flex p-1 rounded-full bg-[#faece9] border border-[#edd7d1] shadow-inner">
             <button
               type="button"
-              onClick={() => setActiveTab('reels')}
+              onClick={() => handleTabSwitch('reels')}
               className={`px-8 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                 activeTab === 'reels'
                   ? 'bg-primary text-white shadow-brand-glow'
@@ -174,7 +264,7 @@ export default function Social({ embedded = false }) {
             </button>
             <button
               type="button"
-              onClick={() => setActiveTab('posts')}
+              onClick={() => handleTabSwitch('posts')}
               className={`px-8 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                 activeTab === 'posts'
                   ? 'bg-primary text-white shadow-brand-glow'
@@ -289,7 +379,7 @@ export default function Social({ embedded = false }) {
                           poster={item.posterSrc}
                           playsInline
                           loop
-                          muted={isCenter ? isMuted : true}
+                          muted={isCenter ? (isMuted || !isSectionVisible) : true}
                           preload="metadata"
                           className="w-full h-full object-cover select-none pointer-events-none"
                         />
