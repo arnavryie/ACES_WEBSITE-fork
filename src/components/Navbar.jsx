@@ -11,6 +11,7 @@ const MENU_ITEMS = [
   { id: 'golden-moments', label: 'Golden Moments', path: '/golden-moments' },
   { id: 'gallery', label: 'Gallery', path: '/gallery' },
   { id: 'social', label: 'Social', path: '/social' },
+  { id: 'members', label: 'Members', path: '/members' },
 ];
 
 export default function Navbar() {
