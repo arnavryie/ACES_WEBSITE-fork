@@ -7,7 +7,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-1.jpg",
     "caption": "Opening address, team registrations, and briefing on problem statements during HackSeries 25.",
     "year": "2025",
-    "location": "DIT Main Auditorium"
+    "location": "DIT Main Auditorium",
+    "imageWebp": "/images/gallery/hackseries-25-1.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-1.webp"
   },
   {
     "id": "gal-2",
@@ -17,7 +19,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-2.jpg",
     "caption": "Opening address, team registrations, and briefing on problem statements during HackSeries 25.",
     "year": "2025",
-    "location": "DIT Main Auditorium"
+    "location": "DIT Main Auditorium",
+    "imageWebp": "/images/gallery/hackseries-25-2.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-2.webp"
   },
   {
     "id": "gal-3",
@@ -27,7 +31,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-3.jpg",
     "caption": "Opening address, team registrations, and briefing on problem statements during HackSeries 25.",
     "year": "2025",
-    "location": "DIT Main Auditorium"
+    "location": "DIT Main Auditorium",
+    "imageWebp": "/images/gallery/hackseries-25-3.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-3.webp"
   },
   {
     "id": "gal-4",
@@ -37,7 +43,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-4.jpg",
     "caption": "Opening address, team registrations, and briefing on problem statements during HackSeries 25.",
     "year": "2025",
-    "location": "DIT Main Auditorium"
+    "location": "DIT Main Auditorium",
+    "imageWebp": "/images/gallery/hackseries-25-4.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-4.webp"
   },
   {
     "id": "gal-5",
@@ -47,7 +55,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-5.jpg",
     "caption": "Opening address, team registrations, and briefing on problem statements during HackSeries 25.",
     "year": "2025",
-    "location": "DIT Main Auditorium"
+    "location": "DIT Main Auditorium",
+    "imageWebp": "/images/gallery/hackseries-25-5.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-5.webp"
   },
   {
     "id": "gal-6",
@@ -57,7 +67,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-6.jpg",
     "caption": "Opening address, team registrations, and briefing on problem statements during HackSeries 25.",
     "year": "2025",
-    "location": "DIT Main Auditorium"
+    "location": "DIT Main Auditorium",
+    "imageWebp": "/images/gallery/hackseries-25-6.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-6.webp"
   },
   {
     "id": "gal-7",
@@ -67,7 +79,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-7.jpg",
     "caption": "Opening address, team registrations, and briefing on problem statements during HackSeries 25.",
     "year": "2025",
-    "location": "DIT Main Auditorium"
+    "location": "DIT Main Auditorium",
+    "imageWebp": "/images/gallery/hackseries-25-7.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-7.webp"
   },
   {
     "id": "gal-8",
@@ -77,7 +91,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-8.jpg",
     "caption": "Engineering squads collaborating intensively on architecture design and prototyping.",
     "year": "2025",
-    "location": "ACES Computing Lab"
+    "location": "ACES Computing Lab",
+    "imageWebp": "/images/gallery/hackseries-25-8.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-8.webp"
   },
   {
     "id": "gal-9",
@@ -87,7 +103,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-9.jpg",
     "caption": "Engineering squads collaborating intensively on architecture design and prototyping.",
     "year": "2025",
-    "location": "ACES Computing Lab"
+    "location": "ACES Computing Lab",
+    "imageWebp": "/images/gallery/hackseries-25-9.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-9.webp"
   },
   {
     "id": "gal-10",
@@ -97,7 +115,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-10.jpg",
     "caption": "Engineering squads collaborating intensively on architecture design and prototyping.",
     "year": "2025",
-    "location": "ACES Computing Lab"
+    "location": "ACES Computing Lab",
+    "imageWebp": "/images/gallery/hackseries-25-10.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-10.webp"
   },
   {
     "id": "gal-11",
@@ -107,7 +127,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-11.jpg",
     "caption": "Engineering squads collaborating intensively on architecture design and prototyping.",
     "year": "2025",
-    "location": "ACES Computing Lab"
+    "location": "ACES Computing Lab",
+    "imageWebp": "/images/gallery/hackseries-25-11.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-11.webp"
   },
   {
     "id": "gal-12",
@@ -117,7 +139,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-12.jpg",
     "caption": "Engineering squads collaborating intensively on architecture design and prototyping.",
     "year": "2025",
-    "location": "ACES Computing Lab"
+    "location": "ACES Computing Lab",
+    "imageWebp": "/images/gallery/hackseries-25-12.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-12.webp"
   },
   {
     "id": "gal-13",
@@ -127,7 +151,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-13.jpg",
     "caption": "Engineering squads collaborating intensively on architecture design and prototyping.",
     "year": "2025",
-    "location": "ACES Computing Lab"
+    "location": "ACES Computing Lab",
+    "imageWebp": "/images/gallery/hackseries-25-13.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-13.webp"
   },
   {
     "id": "gal-14",
@@ -137,7 +163,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-14.jpg",
     "caption": "Engineering squads collaborating intensively on architecture design and prototyping.",
     "year": "2025",
-    "location": "ACES Computing Lab"
+    "location": "ACES Computing Lab",
+    "imageWebp": "/images/gallery/hackseries-25-14.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-14.webp"
   },
   {
     "id": "gal-15",
@@ -147,7 +175,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-15.jpg",
     "caption": "Engineering squads collaborating intensively on architecture design and prototyping.",
     "year": "2025",
-    "location": "ACES Computing Lab"
+    "location": "ACES Computing Lab",
+    "imageWebp": "/images/gallery/hackseries-25-15.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-15.webp"
   },
   {
     "id": "gal-16",
@@ -157,7 +187,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-16.jpg",
     "caption": "Domain specialists and technical mentors reviewing team git repositories and system design.",
     "year": "2025",
-    "location": "Innovation Floor"
+    "location": "Innovation Floor",
+    "imageWebp": "/images/gallery/hackseries-25-16.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-16.webp"
   },
   {
     "id": "gal-17",
@@ -167,7 +199,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-17.jpg",
     "caption": "Domain specialists and technical mentors reviewing team git repositories and system design.",
     "year": "2025",
-    "location": "Innovation Floor"
+    "location": "Innovation Floor",
+    "imageWebp": "/images/gallery/hackseries-25-17.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-17.webp"
   },
   {
     "id": "gal-18",
@@ -177,7 +211,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-18.jpg",
     "caption": "Domain specialists and technical mentors reviewing team git repositories and system design.",
     "year": "2025",
-    "location": "Innovation Floor"
+    "location": "Innovation Floor",
+    "imageWebp": "/images/gallery/hackseries-25-18.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-18.webp"
   },
   {
     "id": "gal-19",
@@ -187,7 +223,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-19.jpg",
     "caption": "Domain specialists and technical mentors reviewing team git repositories and system design.",
     "year": "2025",
-    "location": "Innovation Floor"
+    "location": "Innovation Floor",
+    "imageWebp": "/images/gallery/hackseries-25-19.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-19.webp"
   },
   {
     "id": "gal-20",
@@ -197,7 +235,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-20.jpg",
     "caption": "Domain specialists and technical mentors reviewing team git repositories and system design.",
     "year": "2025",
-    "location": "Innovation Floor"
+    "location": "Innovation Floor",
+    "imageWebp": "/images/gallery/hackseries-25-20.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-20.webp"
   },
   {
     "id": "gal-21",
@@ -207,7 +247,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-21.jpg",
     "caption": "Domain specialists and technical mentors reviewing team git repositories and system design.",
     "year": "2025",
-    "location": "Innovation Floor"
+    "location": "Innovation Floor",
+    "imageWebp": "/images/gallery/hackseries-25-21.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-21.webp"
   },
   {
     "id": "gal-22",
@@ -217,7 +259,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-22.jpg",
     "caption": "Domain specialists and technical mentors reviewing team git repositories and system design.",
     "year": "2025",
-    "location": "Innovation Floor"
+    "location": "Innovation Floor",
+    "imageWebp": "/images/gallery/hackseries-25-22.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-22.webp"
   },
   {
     "id": "gal-23",
@@ -227,7 +271,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-23.jpg",
     "caption": "Engaged developers and UI/UX designers building responsive full-stack solutions.",
     "year": "2025",
-    "location": "Central Tech Arena"
+    "location": "Central Tech Arena",
+    "imageWebp": "/images/gallery/hackseries-25-23.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-23.webp"
   },
   {
     "id": "gal-24",
@@ -237,7 +283,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-24.jpg",
     "caption": "Engaged developers and UI/UX designers building responsive full-stack solutions.",
     "year": "2025",
-    "location": "Central Tech Arena"
+    "location": "Central Tech Arena",
+    "imageWebp": "/images/gallery/hackseries-25-24.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-24.webp"
   },
   {
     "id": "gal-25",
@@ -247,7 +295,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-25.jpg",
     "caption": "Engaged developers and UI/UX designers building responsive full-stack solutions.",
     "year": "2025",
-    "location": "Central Tech Arena"
+    "location": "Central Tech Arena",
+    "imageWebp": "/images/gallery/hackseries-25-25.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-25.webp"
   },
   {
     "id": "gal-26",
@@ -257,7 +307,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-26.jpg",
     "caption": "Engaged developers and UI/UX designers building responsive full-stack solutions.",
     "year": "2025",
-    "location": "Central Tech Arena"
+    "location": "Central Tech Arena",
+    "imageWebp": "/images/gallery/hackseries-25-26.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-26.webp"
   },
   {
     "id": "gal-27",
@@ -267,7 +319,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-27.jpg",
     "caption": "Engaged developers and UI/UX designers building responsive full-stack solutions.",
     "year": "2025",
-    "location": "Central Tech Arena"
+    "location": "Central Tech Arena",
+    "imageWebp": "/images/gallery/hackseries-25-27.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-27.webp"
   },
   {
     "id": "gal-28",
@@ -277,7 +331,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-28.jpg",
     "caption": "Engaged developers and UI/UX designers building responsive full-stack solutions.",
     "year": "2025",
-    "location": "Central Tech Arena"
+    "location": "Central Tech Arena",
+    "imageWebp": "/images/gallery/hackseries-25-28.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-28.webp"
   },
   {
     "id": "gal-29",
@@ -287,7 +343,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-29.jpg",
     "caption": "Engaged developers and UI/UX designers building responsive full-stack solutions.",
     "year": "2025",
-    "location": "Central Tech Arena"
+    "location": "Central Tech Arena",
+    "imageWebp": "/images/gallery/hackseries-25-29.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-29.webp"
   },
   {
     "id": "gal-30",
@@ -297,7 +355,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-30.jpg",
     "caption": "Engaged developers and UI/UX designers building responsive full-stack solutions.",
     "year": "2025",
-    "location": "Central Tech Arena"
+    "location": "Central Tech Arena",
+    "imageWebp": "/images/gallery/hackseries-25-30.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-30.webp"
   },
   {
     "id": "gal-31",
@@ -307,7 +367,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-31.jpg",
     "caption": "Ceremony honoring outstanding project submissions, open-source work, and committee leadership.",
     "year": "2025",
-    "location": "DIT Seminar Hall"
+    "location": "DIT Seminar Hall",
+    "imageWebp": "/images/gallery/hackseries-25-31.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-31.webp"
   },
   {
     "id": "gal-32",
@@ -317,7 +379,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-32.jpg",
     "caption": "Ceremony honoring outstanding project submissions, open-source work, and committee leadership.",
     "year": "2025",
-    "location": "DIT Seminar Hall"
+    "location": "DIT Seminar Hall",
+    "imageWebp": "/images/gallery/hackseries-25-32.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-32.webp"
   },
   {
     "id": "gal-33",
@@ -327,7 +391,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-33.jpg",
     "caption": "Ceremony honoring outstanding project submissions, open-source work, and committee leadership.",
     "year": "2025",
-    "location": "DIT Seminar Hall"
+    "location": "DIT Seminar Hall",
+    "imageWebp": "/images/gallery/hackseries-25-33.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-33.webp"
   },
   {
     "id": "gal-34",
@@ -337,7 +403,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-34.jpg",
     "caption": "Ceremony honoring outstanding project submissions, open-source work, and committee leadership.",
     "year": "2025",
-    "location": "DIT Seminar Hall"
+    "location": "DIT Seminar Hall",
+    "imageWebp": "/images/gallery/hackseries-25-34.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-34.webp"
   },
   {
     "id": "gal-35",
@@ -347,7 +415,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-35.jpg",
     "caption": "Ceremony honoring outstanding project submissions, open-source work, and committee leadership.",
     "year": "2025",
-    "location": "DIT Seminar Hall"
+    "location": "DIT Seminar Hall",
+    "imageWebp": "/images/gallery/hackseries-25-35.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-35.webp"
   },
   {
     "id": "gal-36",
@@ -357,7 +427,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-36.jpg",
     "caption": "Ceremony honoring outstanding project submissions, open-source work, and committee leadership.",
     "year": "2025",
-    "location": "DIT Seminar Hall"
+    "location": "DIT Seminar Hall",
+    "imageWebp": "/images/gallery/hackseries-25-36.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-36.webp"
   },
   {
     "id": "gal-37",
@@ -367,7 +439,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-37.jpg",
     "caption": "Ceremony honoring outstanding project submissions, open-source work, and committee leadership.",
     "year": "2025",
-    "location": "DIT Seminar Hall"
+    "location": "DIT Seminar Hall",
+    "imageWebp": "/images/gallery/hackseries-25-37.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-37.webp"
   },
   {
     "id": "gal-38",
@@ -377,7 +451,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-38.jpg",
     "caption": "Ceremony honoring outstanding project submissions, open-source work, and committee leadership.",
     "year": "2025",
-    "location": "DIT Seminar Hall"
+    "location": "DIT Seminar Hall",
+    "imageWebp": "/images/gallery/hackseries-25-38.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-38.webp"
   },
   {
     "id": "gal-39",
@@ -387,7 +463,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-39.jpg",
     "caption": "Ceremony honoring outstanding project submissions, open-source work, and committee leadership.",
     "year": "2025",
-    "location": "DIT Seminar Hall"
+    "location": "DIT Seminar Hall",
+    "imageWebp": "/images/gallery/hackseries-25-39.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-39.webp"
   },
   {
     "id": "gal-40",
@@ -397,7 +475,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-25-40.jpg",
     "caption": "Ceremony honoring outstanding project submissions, open-source work, and committee leadership.",
     "year": "2025",
-    "location": "DIT Seminar Hall"
+    "location": "DIT Seminar Hall",
+    "imageWebp": "/images/gallery/hackseries-25-40.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-25-40.webp"
   },
   {
     "id": "gal-41",
@@ -407,7 +487,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-1.jpg",
     "caption": "Finalist squads demonstrating working AI and web prototypes live to the jury panel.",
     "year": "2026",
-    "location": "Main Stage, Pune"
+    "location": "Main Stage, Pune",
+    "imageWebp": "/images/gallery/hackathon-main-1.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-1.webp"
   },
   {
     "id": "gal-42",
@@ -417,7 +499,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-2.jpg",
     "caption": "Finalist squads demonstrating working AI and web prototypes live to the jury panel.",
     "year": "2026",
-    "location": "Main Stage, Pune"
+    "location": "Main Stage, Pune",
+    "imageWebp": "/images/gallery/hackathon-main-2.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-2.webp"
   },
   {
     "id": "gal-43",
@@ -427,7 +511,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-3.jpg",
     "caption": "Finalist squads demonstrating working AI and web prototypes live to the jury panel.",
     "year": "2026",
-    "location": "Main Stage, Pune"
+    "location": "Main Stage, Pune",
+    "imageWebp": "/images/gallery/hackathon-main-3.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-3.webp"
   },
   {
     "id": "gal-44",
@@ -437,7 +523,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-4.jpg",
     "caption": "Finalist squads demonstrating working AI and web prototypes live to the jury panel.",
     "year": "2026",
-    "location": "Main Stage, Pune"
+    "location": "Main Stage, Pune",
+    "imageWebp": "/images/gallery/hackathon-main-4.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-4.webp"
   },
   {
     "id": "gal-45",
@@ -447,7 +535,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-5.jpg",
     "caption": "Finalist squads demonstrating working AI and web prototypes live to the jury panel.",
     "year": "2026",
-    "location": "Main Stage, Pune"
+    "location": "Main Stage, Pune",
+    "imageWebp": "/images/gallery/hackathon-main-5.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-5.webp"
   },
   {
     "id": "gal-46",
@@ -457,7 +547,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-6.jpg",
     "caption": "Finalist squads demonstrating working AI and web prototypes live to the jury panel.",
     "year": "2026",
-    "location": "Main Stage, Pune"
+    "location": "Main Stage, Pune",
+    "imageWebp": "/images/gallery/hackathon-main-6.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-6.webp"
   },
   {
     "id": "gal-47",
@@ -467,7 +559,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-7.jpg",
     "caption": "Teams pushing commits late into the night during the national hackathon sprint.",
     "year": "2026",
-    "location": "Tech Hub Lab 4"
+    "location": "Tech Hub Lab 4",
+    "imageWebp": "/images/gallery/hackathon-main-7.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-7.webp"
   },
   {
     "id": "gal-48",
@@ -477,7 +571,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-8.jpg",
     "caption": "Teams pushing commits late into the night during the national hackathon sprint.",
     "year": "2026",
-    "location": "Tech Hub Lab 4"
+    "location": "Tech Hub Lab 4",
+    "imageWebp": "/images/gallery/hackathon-main-8.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-8.webp"
   },
   {
     "id": "gal-49",
@@ -487,7 +583,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-9.jpg",
     "caption": "Teams pushing commits late into the night during the national hackathon sprint.",
     "year": "2026",
-    "location": "Tech Hub Lab 4"
+    "location": "Tech Hub Lab 4",
+    "imageWebp": "/images/gallery/hackathon-main-9.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-9.webp"
   },
   {
     "id": "gal-50",
@@ -497,7 +595,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-10.jpg",
     "caption": "Teams pushing commits late into the night during the national hackathon sprint.",
     "year": "2026",
-    "location": "Tech Hub Lab 4"
+    "location": "Tech Hub Lab 4",
+    "imageWebp": "/images/gallery/hackathon-main-10.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-10.webp"
   },
   {
     "id": "gal-51",
@@ -507,7 +607,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-11.jpg",
     "caption": "Teams pushing commits late into the night during the national hackathon sprint.",
     "year": "2026",
-    "location": "Tech Hub Lab 4"
+    "location": "Tech Hub Lab 4",
+    "imageWebp": "/images/gallery/hackathon-main-11.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-11.webp"
   },
   {
     "id": "gal-52",
@@ -517,7 +619,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-12.jpg",
     "caption": "Teams pushing commits late into the night during the national hackathon sprint.",
     "year": "2026",
-    "location": "Tech Hub Lab 4"
+    "location": "Tech Hub Lab 4",
+    "imageWebp": "/images/gallery/hackathon-main-12.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-12.webp"
   },
   {
     "id": "gal-53",
@@ -527,7 +631,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-13.jpg",
     "caption": "Teams pushing commits late into the night during the national hackathon sprint.",
     "year": "2026",
-    "location": "Tech Hub Lab 4"
+    "location": "Tech Hub Lab 4",
+    "imageWebp": "/images/gallery/hackathon-main-13.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-13.webp"
   },
   {
     "id": "gal-54",
@@ -537,7 +643,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-14.jpg",
     "caption": "Judges and faculty reviewing live deployments, API endpoints, and database models.",
     "year": "2026",
-    "location": "Exhibition Hall"
+    "location": "Exhibition Hall",
+    "imageWebp": "/images/gallery/hackathon-main-14.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-14.webp"
   },
   {
     "id": "gal-55",
@@ -547,7 +655,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-15.jpg",
     "caption": "Judges and faculty reviewing live deployments, API endpoints, and database models.",
     "year": "2026",
-    "location": "Exhibition Hall"
+    "location": "Exhibition Hall",
+    "imageWebp": "/images/gallery/hackathon-main-15.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-15.webp"
   },
   {
     "id": "gal-56",
@@ -557,7 +667,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-16.jpg",
     "caption": "Judges and faculty reviewing live deployments, API endpoints, and database models.",
     "year": "2026",
-    "location": "Exhibition Hall"
+    "location": "Exhibition Hall",
+    "imageWebp": "/images/gallery/hackathon-main-16.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-16.webp"
   },
   {
     "id": "gal-57",
@@ -567,7 +679,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-17.jpg",
     "caption": "Judges and faculty reviewing live deployments, API endpoints, and database models.",
     "year": "2026",
-    "location": "Exhibition Hall"
+    "location": "Exhibition Hall",
+    "imageWebp": "/images/gallery/hackathon-main-17.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-17.webp"
   },
   {
     "id": "gal-58",
@@ -577,7 +691,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-18.jpg",
     "caption": "Judges and faculty reviewing live deployments, API endpoints, and database models.",
     "year": "2026",
-    "location": "Exhibition Hall"
+    "location": "Exhibition Hall",
+    "imageWebp": "/images/gallery/hackathon-main-18.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-18.webp"
   },
   {
     "id": "gal-59",
@@ -587,7 +703,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-19.jpg",
     "caption": "Judges and faculty reviewing live deployments, API endpoints, and database models.",
     "year": "2026",
-    "location": "Exhibition Hall"
+    "location": "Exhibition Hall",
+    "imageWebp": "/images/gallery/hackathon-main-19.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-19.webp"
   },
   {
     "id": "gal-60",
@@ -597,7 +715,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-20.jpg",
     "caption": "Winners felicitated on stage with trophies, certificates, and cash prizes.",
     "year": "2026",
-    "location": "Grand Auditorium"
+    "location": "Grand Auditorium",
+    "imageWebp": "/images/gallery/hackathon-main-20.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-20.webp"
   },
   {
     "id": "gal-61",
@@ -607,7 +727,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-21.jpg",
     "caption": "Winners felicitated on stage with trophies, certificates, and cash prizes.",
     "year": "2026",
-    "location": "Grand Auditorium"
+    "location": "Grand Auditorium",
+    "imageWebp": "/images/gallery/hackathon-main-21.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-21.webp"
   },
   {
     "id": "gal-62",
@@ -617,7 +739,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-22.jpg",
     "caption": "Winners felicitated on stage with trophies, certificates, and cash prizes.",
     "year": "2026",
-    "location": "Grand Auditorium"
+    "location": "Grand Auditorium",
+    "imageWebp": "/images/gallery/hackathon-main-22.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-22.webp"
   },
   {
     "id": "gal-63",
@@ -627,7 +751,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-23.jpg",
     "caption": "Winners felicitated on stage with trophies, certificates, and cash prizes.",
     "year": "2026",
-    "location": "Grand Auditorium"
+    "location": "Grand Auditorium",
+    "imageWebp": "/images/gallery/hackathon-main-23.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-23.webp"
   },
   {
     "id": "gal-64",
@@ -637,7 +763,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-24.jpg",
     "caption": "Winners felicitated on stage with trophies, certificates, and cash prizes.",
     "year": "2026",
-    "location": "Grand Auditorium"
+    "location": "Grand Auditorium",
+    "imageWebp": "/images/gallery/hackathon-main-24.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-24.webp"
   },
   {
     "id": "gal-65",
@@ -647,7 +775,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-main-25.jpg",
     "caption": "Winners felicitated on stage with trophies, certificates, and cash prizes.",
     "year": "2026",
-    "location": "Grand Auditorium"
+    "location": "Grand Auditorium",
+    "imageWebp": "/images/gallery/hackathon-main-25.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-main-25.webp"
   },
   {
     "id": "gal-66",
@@ -657,7 +787,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-1.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-1.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-1.webp"
   },
   {
     "id": "gal-67",
@@ -667,7 +799,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-2.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-2.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-2.webp"
   },
   {
     "id": "gal-68",
@@ -677,7 +811,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-3.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-3.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-3.webp"
   },
   {
     "id": "gal-69",
@@ -687,7 +823,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-4.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-4.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-4.webp"
   },
   {
     "id": "gal-70",
@@ -697,7 +835,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-5.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-5.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-5.webp"
   },
   {
     "id": "gal-71",
@@ -707,7 +847,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-6.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-6.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-6.webp"
   },
   {
     "id": "gal-72",
@@ -717,7 +859,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-7.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-7.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-7.webp"
   },
   {
     "id": "gal-73",
@@ -727,7 +871,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-8.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-8.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-8.webp"
   },
   {
     "id": "gal-74",
@@ -737,7 +883,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-9.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-9.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-9.webp"
   },
   {
     "id": "gal-75",
@@ -747,7 +895,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-10.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-10.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-10.webp"
   },
   {
     "id": "gal-76",
@@ -757,7 +907,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-11.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-11.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-11.webp"
   },
   {
     "id": "gal-77",
@@ -767,7 +919,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-12.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-12.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-12.webp"
   },
   {
     "id": "gal-78",
@@ -777,7 +931,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-13.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-13.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-13.webp"
   },
   {
     "id": "gal-79",
@@ -787,7 +943,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-14.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-14.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-14.webp"
   },
   {
     "id": "gal-80",
@@ -797,7 +955,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackathon-bts-15.jpg",
     "caption": "Behind-the-scenes event logistics, stage management, live streaming, and volunteer coordination.",
     "year": "2026",
-    "location": "Backstage & Control Room"
+    "location": "Backstage & Control Room",
+    "imageWebp": "/images/gallery/hackathon-bts-15.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackathon-bts-15.webp"
   },
   {
     "id": "gal-81",
@@ -807,7 +967,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/german-event-1.jpg",
     "caption": "Guest delegation and visiting professors sharing global tech perspectives and research opportunities.",
     "year": "2025",
-    "location": "International Conference Hall"
+    "location": "International Conference Hall",
+    "imageWebp": "/images/gallery/german-event-1.webp",
+    "thumbWebp": "/images/gallery/thumbs/german-event-1.webp"
   },
   {
     "id": "gal-82",
@@ -817,7 +979,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/german-event-2.jpg",
     "caption": "Guest delegation and visiting professors sharing global tech perspectives and research opportunities.",
     "year": "2025",
-    "location": "International Conference Hall"
+    "location": "International Conference Hall",
+    "imageWebp": "/images/gallery/german-event-2.webp",
+    "thumbWebp": "/images/gallery/thumbs/german-event-2.webp"
   },
   {
     "id": "gal-83",
@@ -827,7 +991,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/german-event-3.jpg",
     "caption": "Guest delegation and visiting professors sharing global tech perspectives and research opportunities.",
     "year": "2025",
-    "location": "International Conference Hall"
+    "location": "International Conference Hall",
+    "imageWebp": "/images/gallery/german-event-3.webp",
+    "thumbWebp": "/images/gallery/thumbs/german-event-3.webp"
   },
   {
     "id": "gal-84",
@@ -837,7 +1003,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/german-event-4.jpg",
     "caption": "Guest delegation and visiting professors sharing global tech perspectives and research opportunities.",
     "year": "2025",
-    "location": "International Conference Hall"
+    "location": "International Conference Hall",
+    "imageWebp": "/images/gallery/german-event-4.webp",
+    "thumbWebp": "/images/gallery/thumbs/german-event-4.webp"
   },
   {
     "id": "gal-85",
@@ -847,7 +1015,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/german-event-5.jpg",
     "caption": "Interactive Q&A on higher education, robotics research, and overseas engineering careers.",
     "year": "2025",
-    "location": "Seminar Hall 2"
+    "location": "Seminar Hall 2",
+    "imageWebp": "/images/gallery/german-event-5.webp",
+    "thumbWebp": "/images/gallery/thumbs/german-event-5.webp"
   },
   {
     "id": "gal-86",
@@ -857,7 +1027,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/german-event-6.jpg",
     "caption": "Interactive Q&A on higher education, robotics research, and overseas engineering careers.",
     "year": "2025",
-    "location": "Seminar Hall 2"
+    "location": "Seminar Hall 2",
+    "imageWebp": "/images/gallery/german-event-6.webp",
+    "thumbWebp": "/images/gallery/thumbs/german-event-6.webp"
   },
   {
     "id": "gal-87",
@@ -867,7 +1039,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/german-event-7.jpg",
     "caption": "Interactive Q&A on higher education, robotics research, and overseas engineering careers.",
     "year": "2025",
-    "location": "Seminar Hall 2"
+    "location": "Seminar Hall 2",
+    "imageWebp": "/images/gallery/german-event-7.webp",
+    "thumbWebp": "/images/gallery/thumbs/german-event-7.webp"
   },
   {
     "id": "gal-88",
@@ -877,7 +1051,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/german-event-8.jpg",
     "caption": "Students interacting with international guests, exchanging ideas, and celebrating academic synergy.",
     "year": "2025",
-    "location": "ACES Tech Lounge"
+    "location": "ACES Tech Lounge",
+    "imageWebp": "/images/gallery/german-event-8.webp",
+    "thumbWebp": "/images/gallery/thumbs/german-event-8.webp"
   },
   {
     "id": "gal-89",
@@ -887,7 +1063,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/german-event-9.jpg",
     "caption": "Students interacting with international guests, exchanging ideas, and celebrating academic synergy.",
     "year": "2025",
-    "location": "ACES Tech Lounge"
+    "location": "ACES Tech Lounge",
+    "imageWebp": "/images/gallery/german-event-9.webp",
+    "thumbWebp": "/images/gallery/thumbs/german-event-9.webp"
   },
   {
     "id": "gal-90",
@@ -897,7 +1075,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/german-event-10.jpg",
     "caption": "Students interacting with international guests, exchanging ideas, and celebrating academic synergy.",
     "year": "2025",
-    "location": "ACES Tech Lounge"
+    "location": "ACES Tech Lounge",
+    "imageWebp": "/images/gallery/german-event-10.webp",
+    "thumbWebp": "/images/gallery/thumbs/german-event-10.webp"
   },
   {
     "id": "gal-91",
@@ -907,7 +1087,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-01-1.jpg",
     "caption": "Inaugural edition of the HackSeries franchise bringing early-year developers together.",
     "year": "2025",
-    "location": "ACES Innovation Lab"
+    "location": "ACES Innovation Lab",
+    "imageWebp": "/images/gallery/hackseries-01-1.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-01-1.webp"
   },
   {
     "id": "gal-92",
@@ -917,7 +1099,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-01-2.jpg",
     "caption": "Inaugural edition of the HackSeries franchise bringing early-year developers together.",
     "year": "2025",
-    "location": "ACES Innovation Lab"
+    "location": "ACES Innovation Lab",
+    "imageWebp": "/images/gallery/hackseries-01-2.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-01-2.webp"
   },
   {
     "id": "gal-93",
@@ -927,7 +1111,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-01-3.jpg",
     "caption": "Inaugural edition of the HackSeries franchise bringing early-year developers together.",
     "year": "2025",
-    "location": "ACES Innovation Lab"
+    "location": "ACES Innovation Lab",
+    "imageWebp": "/images/gallery/hackseries-01-3.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-01-3.webp"
   },
   {
     "id": "gal-94",
@@ -937,7 +1123,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-01-4.jpg",
     "caption": "Inaugural edition of the HackSeries franchise bringing early-year developers together.",
     "year": "2025",
-    "location": "ACES Innovation Lab"
+    "location": "ACES Innovation Lab",
+    "imageWebp": "/images/gallery/hackseries-01-4.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-01-4.webp"
   },
   {
     "id": "gal-95",
@@ -947,7 +1135,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-01-5.jpg",
     "caption": "Inaugural edition of the HackSeries franchise bringing early-year developers together.",
     "year": "2025",
-    "location": "ACES Innovation Lab"
+    "location": "ACES Innovation Lab",
+    "imageWebp": "/images/gallery/hackseries-01-5.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-01-5.webp"
   },
   {
     "id": "gal-96",
@@ -957,7 +1147,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-01-6.jpg",
     "caption": "Inaugural edition of the HackSeries franchise bringing early-year developers together.",
     "year": "2025",
-    "location": "ACES Innovation Lab"
+    "location": "ACES Innovation Lab",
+    "imageWebp": "/images/gallery/hackseries-01-6.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-01-6.webp"
   },
   {
     "id": "gal-97",
@@ -967,7 +1159,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-alt-1.jpg",
     "caption": "Inaugural edition of the HackSeries franchise bringing early-year developers together.",
     "year": "2025",
-    "location": "ACES Innovation Lab"
+    "location": "ACES Innovation Lab",
+    "imageWebp": "/images/gallery/hackseries-alt-1.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-alt-1.webp"
   },
   {
     "id": "gal-98",
@@ -977,7 +1171,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-alt-2.jpg",
     "caption": "Inaugural edition of the HackSeries franchise bringing early-year developers together.",
     "year": "2025",
-    "location": "ACES Innovation Lab"
+    "location": "ACES Innovation Lab",
+    "imageWebp": "/images/gallery/hackseries-alt-2.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-alt-2.webp"
   },
   {
     "id": "gal-99",
@@ -987,7 +1183,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-alt-3.jpg",
     "caption": "Inaugural edition of the HackSeries franchise bringing early-year developers together.",
     "year": "2025",
-    "location": "ACES Innovation Lab"
+    "location": "ACES Innovation Lab",
+    "imageWebp": "/images/gallery/hackseries-alt-3.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-alt-3.webp"
   },
   {
     "id": "gal-100",
@@ -997,7 +1195,9 @@ export const galleryItems = [
     "thumb": "/images/gallery/thumbs/hackseries-alt-4.jpg",
     "caption": "Inaugural edition of the HackSeries franchise bringing early-year developers together.",
     "year": "2025",
-    "location": "ACES Innovation Lab"
+    "location": "ACES Innovation Lab",
+    "imageWebp": "/images/gallery/hackseries-alt-4.webp",
+    "thumbWebp": "/images/gallery/thumbs/hackseries-alt-4.webp"
   }
 ];
 
@@ -1005,61 +1205,73 @@ export const marqueeImages = [
   {
     "id": "mq-1",
     "url": "/images/gallery/thumbs/hackseries-25-1.jpg",
-    "alt": "HackSeries 25th Flagship Keynote #1"
+    "alt": "HackSeries 25th Flagship Keynote #1",
+    "urlWebp": "/images/gallery/thumbs/hackseries-25-1.webp"
   },
   {
     "id": "mq-2",
     "url": "/images/gallery/thumbs/hackseries-25-8.jpg",
-    "alt": "HackSeries 25th Coding Sprints #1"
+    "alt": "HackSeries 25th Coding Sprints #1",
+    "urlWebp": "/images/gallery/thumbs/hackseries-25-8.webp"
   },
   {
     "id": "mq-3",
     "url": "/images/gallery/thumbs/hackseries-25-16.jpg",
-    "alt": "Mentor Review & Code Diagnostics #1"
+    "alt": "Mentor Review & Code Diagnostics #1",
+    "urlWebp": "/images/gallery/thumbs/hackseries-25-16.webp"
   },
   {
     "id": "mq-4",
     "url": "/images/gallery/thumbs/hackseries-25-23.jpg",
-    "alt": "Student Collaboration Hub #1"
+    "alt": "Student Collaboration Hub #1",
+    "urlWebp": "/images/gallery/thumbs/hackseries-25-23.webp"
   },
   {
     "id": "mq-5",
     "url": "/images/gallery/thumbs/hackseries-25-36.jpg",
-    "alt": "HackSeries 25th Showcase & Felicitation #6"
+    "alt": "HackSeries 25th Showcase & Felicitation #6",
+    "urlWebp": "/images/gallery/thumbs/hackseries-25-36.webp"
   },
   {
     "id": "mq-6",
     "url": "/images/gallery/thumbs/hackathon-main-1.jpg",
-    "alt": "National Hackathon Pitch Stage #1"
+    "alt": "National Hackathon Pitch Stage #1",
+    "urlWebp": "/images/gallery/thumbs/hackathon-main-1.webp"
   },
   {
     "id": "mq-7",
     "url": "/images/gallery/thumbs/hackathon-main-6.jpg",
-    "alt": "National Hackathon Pitch Stage #6"
+    "alt": "National Hackathon Pitch Stage #6",
+    "urlWebp": "/images/gallery/thumbs/hackathon-main-6.webp"
   },
   {
     "id": "mq-8",
     "url": "/images/gallery/thumbs/hackathon-main-14.jpg",
-    "alt": "Jury Evaluation & Architecture Review #1"
+    "alt": "Jury Evaluation & Architecture Review #1",
+    "urlWebp": "/images/gallery/thumbs/hackathon-main-14.webp"
   },
   {
     "id": "mq-9",
     "url": "/images/gallery/thumbs/hackathon-bts-1.jpg",
-    "alt": "ACES Organizing Crew & Operations #1"
+    "alt": "ACES Organizing Crew & Operations #1",
+    "urlWebp": "/images/gallery/thumbs/hackathon-bts-1.webp"
   },
   {
     "id": "mq-10",
     "url": "/images/gallery/thumbs/hackathon-bts-11.jpg",
-    "alt": "ACES Organizing Crew & Operations #11"
+    "alt": "ACES Organizing Crew & Operations #11",
+    "urlWebp": "/images/gallery/thumbs/hackathon-bts-11.webp"
   },
   {
     "id": "mq-11",
     "url": "/images/gallery/thumbs/german-event-1.jpg",
-    "alt": "Indo-German Tech & Academic Exchange #1"
+    "alt": "Indo-German Tech & Academic Exchange #1",
+    "urlWebp": "/images/gallery/thumbs/german-event-1.webp"
   },
   {
     "id": "mq-12",
     "url": "/images/gallery/thumbs/hackseries-01-1.jpg",
-    "alt": "HackSeries 0.1 Inception & Kickoff #91"
+    "alt": "HackSeries 0.1 Inception & Kickoff #91",
+    "urlWebp": "/images/gallery/thumbs/hackseries-01-1.webp"
   }
 ];

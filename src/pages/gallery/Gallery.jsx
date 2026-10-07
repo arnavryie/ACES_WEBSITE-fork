@@ -25,6 +25,11 @@ export default function Gallery({ embedded = false }) {
   const [isLoading, setIsLoading] = useState(false);
   const [isHeroVisible, setIsHeroVisible] = useState(true);
 
+  // Progressive HD Loading & Cache Tracking for Modal
+  const [isHdLoaded, setIsHdLoaded] = useState(false);
+  const [hdLoadError, setHdLoadError] = useState(false);
+  const loadedHdCache = useRef(new Set());
+
   const heroRef = useRef(null);
   const closeBtnRef = useRef(null);
 
@@ -115,6 +120,82 @@ export default function Gallery({ embedded = false }) {
     touchEndX.current = 0;
   };
 
+  // Progressive Two-Stage Image Loading: Immediate Preview -> Seamless HD Crisp Load
+  useEffect(() => {
+    if (activeItemIndex === null) {
+      setIsHdLoaded(false);
+      setHdLoadError(false);
+      return;
+    }
+
+    const currentItem = filteredItems[activeItemIndex];
+    if (!currentItem) return;
+
+    const hdWebp = currentItem.imageWebp;
+    const hdFallback = currentItem.image;
+    const hdTarget = hdWebp || hdFallback;
+
+    // Check if HD is already cached in memory
+    if (loadedHdCache.current.has(hdTarget)) {
+      setIsHdLoaded(true);
+      setHdLoadError(false);
+      return;
+    }
+
+    setIsHdLoaded(false);
+    setHdLoadError(false);
+
+    // Progressive background load
+    const img = new Image();
+    img.src = hdTarget;
+    img.onload = () => {
+      loadedHdCache.current.add(hdTarget);
+      setIsHdLoaded(true);
+    };
+    img.onerror = () => {
+      // If WebP fails on older browsers, fallback to JPG
+      if (hdFallback && hdTarget !== hdFallback) {
+        const fallbackImg = new Image();
+        fallbackImg.src = hdFallback;
+        fallbackImg.onload = () => {
+          loadedHdCache.current.add(hdFallback);
+          setIsHdLoaded(true);
+        };
+        fallbackImg.onerror = () => setHdLoadError(true);
+      } else {
+        setHdLoadError(true);
+      }
+    };
+  }, [activeItemIndex, filteredItems]);
+
+  // Intelligent Adjacent Preloading (Next & Prev)
+  useEffect(() => {
+    if (activeItemIndex === null || filteredItems.length <= 1) return;
+
+    const nextIdx = (activeItemIndex + 1) % filteredItems.length;
+    const prevIdx = (activeItemIndex - 1 + filteredItems.length) % filteredItems.length;
+
+    [nextIdx, prevIdx].forEach(idx => {
+      const item = filteredItems[idx];
+      if (!item) return;
+
+      // 1. Preload fast thumbnail for instant switch
+      const thumbSrc = item.thumbWebp || item.thumb;
+      if (thumbSrc) {
+        const thumbImg = new Image();
+        thumbImg.src = thumbSrc;
+      }
+
+      // 2. Preload HD in background
+      const hdSrc = item.imageWebp || item.image;
+      if (hdSrc && !loadedHdCache.current.has(hdSrc)) {
+        const hdImg = new Image();
+        hdImg.src = hdSrc;
+        hdImg.onload = () => loadedHdCache.current.add(hdSrc);
+      }
+    });
+  }, [activeItemIndex, filteredItems]);
+
   const handleCtaClick = () => {
     if (embedded) {
       navigate('/gallery');
@@ -183,7 +264,10 @@ export default function Gallery({ embedded = false }) {
               <div className="marquee-container animate-marquee-sync flex flex-col gap-4 sm:gap-6">
                 {[...col1, ...col2].map((img, idx) => (
                   <div key={`sync1-${idx}`} className="w-full aspect-[4/3] rounded-[8px] overflow-hidden bg-light-tint shadow-sm">
-                    <img src={img.url} alt={img.alt} className="w-full h-full object-cover" />
+                    <picture className="w-full h-full">
+                      {img.urlWebp && <source srcSet={img.urlWebp} type="image/webp" />}
+                      <img src={img.url} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                    </picture>
                   </div>
                 ))}
               </div>
@@ -192,7 +276,10 @@ export default function Gallery({ embedded = false }) {
               <div className="marquee-container animate-marquee-sync flex flex-col gap-4 sm:gap-6" style={{ animationDirection: 'reverse' }}>
                 {[...col3, ...col4].map((img, idx) => (
                   <div key={`sync2-${idx}`} className="w-full aspect-[4/3] rounded-[8px] overflow-hidden bg-light-tint shadow-sm">
-                    <img src={img.url} alt={img.alt} className="w-full h-full object-cover" />
+                    <picture className="w-full h-full">
+                      {img.urlWebp && <source srcSet={img.urlWebp} type="image/webp" />}
+                      <img src={img.url} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                    </picture>
                   </div>
                 ))}
               </div>
@@ -206,7 +293,10 @@ export default function Gallery({ embedded = false }) {
               <div className="marquee-container animate-marquee-col1 flex flex-col gap-6">
                 {col1.map((img, idx) => (
                   <div key={`col1-${idx}`} className="w-full aspect-[4/3] rounded-[8px] overflow-hidden bg-light-tint shadow-sm">
-                    <img src={img.url} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    <picture className="w-full h-full">
+                      {img.urlWebp && <source srcSet={img.urlWebp} type="image/webp" />}
+                      <img src={img.url} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    </picture>
                   </div>
                 ))}
               </div>
@@ -217,7 +307,10 @@ export default function Gallery({ embedded = false }) {
               <div className="marquee-container animate-marquee-col2 flex flex-col gap-6">
                 {col2.map((img, idx) => (
                   <div key={`col2-${idx}`} className="w-full aspect-[4/3] rounded-[8px] overflow-hidden bg-light-tint shadow-sm">
-                    <img src={img.url} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    <picture className="w-full h-full">
+                      {img.urlWebp && <source srcSet={img.urlWebp} type="image/webp" />}
+                      <img src={img.url} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    </picture>
                   </div>
                 ))}
               </div>
@@ -228,7 +321,10 @@ export default function Gallery({ embedded = false }) {
               <div className="marquee-container animate-marquee-col3 flex flex-col gap-6">
                 {col3.map((img, idx) => (
                   <div key={`col3-${idx}`} className="w-full aspect-[4/3] rounded-[8px] overflow-hidden bg-light-tint shadow-sm">
-                    <img src={img.url} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    <picture className="w-full h-full">
+                      {img.urlWebp && <source srcSet={img.urlWebp} type="image/webp" />}
+                      <img src={img.url} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    </picture>
                   </div>
                 ))}
               </div>
@@ -239,7 +335,10 @@ export default function Gallery({ embedded = false }) {
               <div className="marquee-container animate-marquee-col4 flex flex-col gap-6">
                 {col4.map((img, idx) => (
                   <div key={`col4-${idx}`} className="w-full aspect-[4/3] rounded-[8px] overflow-hidden bg-light-tint shadow-sm">
-                    <img src={img.url} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    <picture className="w-full h-full">
+                      {img.urlWebp && <source srcSet={img.urlWebp} type="image/webp" />}
+                      <img src={img.url} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    </picture>
                   </div>
                 ))}
               </div>
@@ -429,18 +528,81 @@ export default function Gallery({ embedded = false }) {
                   </button>
                 </div>
 
-                {/* Main Image View */}
-                <div className="relative flex-grow overflow-hidden bg-light-tint flex items-center justify-center min-h-[260px] sm:min-h-[380px]">
-                  <img
-                    src={filteredItems[activeItemIndex]?.image}
-                    alt={filteredItems[activeItemIndex]?.title}
-                    className="max-h-[60vh] w-auto max-w-full object-contain select-none shadow-md"
+                {/* Main Image View with Progressive Two-Stage Loading */}
+                <div className="relative flex-grow overflow-hidden bg-[#18161e] flex items-center justify-center min-h-[280px] sm:min-h-[420px] max-h-[65vh] p-3 select-none">
+                  {/* Subtle Ambient Glow behind photo */}
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center blur-3xl opacity-25 scale-125 pointer-events-none transition-all duration-700"
+                    style={{ backgroundImage: `url(${filteredItems[activeItemIndex]?.thumbWebp || filteredItems[activeItemIndex]?.thumb || filteredItems[activeItemIndex]?.image})` }}
                   />
+
+                  {/* Progressive Loading Quality Status Badge */}
+                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 pointer-events-none">
+                    {!isHdLoaded && !hdLoadError ? (
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/75 text-amber-300 text-[11px] sm:text-xs font-mono font-semibold tracking-wider backdrop-blur-md border border-amber-400/30 shadow-lg">
+                        <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
+                        <span>Instant Preview • Loading HD...</span>
+                      </div>
+                    ) : isHdLoaded ? (
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 text-emerald-300 text-[11px] sm:text-xs font-mono font-semibold tracking-wider backdrop-blur-md border border-emerald-400/30 shadow-lg">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                        <span>HD Ready</span>
+                      </div>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setHdLoadError(false);
+                          setIsHdLoaded(false);
+                          const current = filteredItems[activeItemIndex];
+                          const img = new Image();
+                          img.src = current?.imageWebp || current?.image;
+                          img.onload = () => setIsHdLoaded(true);
+                          img.onerror = () => setHdLoadError(true);
+                        }}
+                        className="pointer-events-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-950/80 text-rose-300 hover:text-white text-[11px] sm:text-xs font-mono font-semibold tracking-wider backdrop-blur-md border border-rose-500/30 transition-colors cursor-pointer"
+                      >
+                        <span>HD Load Failed • Retry ↺</span>
+                      </button>
+                    )}
+                  </div>
+
+                  {/* STAGE 1: Instant Low-Resolution Preview (Renders immediately in 0ms from cache) */}
+                  <picture className="contents">
+                    {filteredItems[activeItemIndex]?.thumbWebp && (
+                      <source srcSet={filteredItems[activeItemIndex].thumbWebp} type="image/webp" />
+                    )}
+                    <img
+                      src={filteredItems[activeItemIndex]?.thumb || filteredItems[activeItemIndex]?.image}
+                      alt={filteredItems[activeItemIndex]?.title}
+                      draggable={false}
+                      className={`relative z-10 max-h-[60vh] w-auto max-w-full object-contain select-none shadow-2xl transition-all duration-300 ${
+                        isHdLoaded ? 'filter-none' : 'filter blur-[0.4px]'
+                      }`}
+                    />
+                  </picture>
+
+                  {/* STAGE 2: Full High-Resolution Photo (Fades in over thumbnail with zero flicker) */}
+                  <picture className="contents">
+                    {filteredItems[activeItemIndex]?.imageWebp && (
+                      <source srcSet={filteredItems[activeItemIndex].imageWebp} type="image/webp" />
+                    )}
+                    <img
+                      key={filteredItems[activeItemIndex]?.imageWebp || filteredItems[activeItemIndex]?.image}
+                      src={filteredItems[activeItemIndex]?.image}
+                      alt={filteredItems[activeItemIndex]?.title}
+                      draggable={false}
+                      className={`absolute inset-0 m-auto z-15 max-h-[60vh] w-auto max-w-full object-contain select-none shadow-2xl transition-opacity duration-500 ease-out ${
+                        isHdLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                      }`}
+                    />
+                  </picture>
 
                   {/* Left Arrow Button */}
                   <button
                     onClick={() => setActiveItemIndex(prev => (prev > 0 ? prev - 1 : filteredItems.length - 1))}
-                    className="absolute left-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-white/90 hover:bg-white text-dark-overlay border border-muted/50 shadow-sm transition-colors cursor-pointer hidden sm:flex items-center justify-center"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-white/90 hover:bg-white text-dark-overlay border border-muted/50 shadow-md transition-colors cursor-pointer hidden sm:flex items-center justify-center"
                     aria-label="Previous image"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -449,7 +611,7 @@ export default function Gallery({ embedded = false }) {
                   {/* Right Arrow Button */}
                   <button
                     onClick={() => setActiveItemIndex(prev => (prev < filteredItems.length - 1 ? prev + 1 : 0))}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-white/90 hover:bg-white text-dark-overlay border border-muted/50 shadow-sm transition-colors cursor-pointer hidden sm:flex items-center justify-center"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-white/90 hover:bg-white text-dark-overlay border border-muted/50 shadow-md transition-colors cursor-pointer hidden sm:flex items-center justify-center"
                     aria-label="Next image"
                   >
                     <ChevronRight className="w-5 h-5" />

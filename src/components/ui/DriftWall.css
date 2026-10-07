@@ -103,7 +103,7 @@
   display: block;
   border-radius: var(--dw-radius);
   overflow: hidden;
-  background: #ffffff;
+  background: #f5f2eb;
   /* Crisp visible outline and floating elevation */
   border: 2px solid #e2ded4;
   box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.06);
@@ -113,6 +113,7 @@
     transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  contain: paint;
 }
 
 .drift-wall__img {
@@ -123,11 +124,31 @@
   object-fit: cover;
   display: block;
   z-index: 1;
-  background-color: #f4f2ee;
+  background-color: transparent;
   filter: grayscale(var(--dw-gray)) saturate(1.02);
-  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, opacity 0.35s ease-in;
   user-select: none;
   -webkit-user-drag: none;
+  opacity: 0;
+}
+
+.drift-wall__img.is-loaded {
+  opacity: 1;
+}
+
+/* Shimmer Skeleton Placeholder while thumbnail loads */
+.drift-wall__skeleton {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(90deg, #f0ece5 0%, #e5dfd4 50%, #f0ece5 100%);
+  background-size: 200% 100%;
+  animation: dwSkeletonShimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes dwSkeletonShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 /* Fallback Card when Image is loading or offline */

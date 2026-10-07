@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, memo } from 'react';
 import './DriftWall.css';
 
 const DEFAULT_DEMO_IMAGES = [
@@ -197,15 +197,17 @@ const DriftWall = ({
       const unit = tileWidth + gap;
       return trackItems.map(row => {
         const copyWidth = Math.max(unit, row.length * unit);
-        // Ensure at least 4 copies to fill wide screens without gap
-        const copies = Math.max(3, Math.ceil((containerDimensions.width * 2.5) / copyWidth) + 2);
+        // Seamless looping: cover container width + one unitLength with minimum redundant DOM nodes
+        const neededWidth = containerDimensions.width * 1.4 + copyWidth;
+        const copies = Math.max(2, Math.min(3, Math.ceil(neededWidth / copyWidth)));
         return { unitLength: copyWidth, copies };
       });
     } else {
       const unit = tileHeight + gap;
       return trackItems.map(col => {
         const copyHeight = Math.max(unit, col.length * unit);
-        const copies = Math.max(3, Math.ceil((containerDimensions.height * 2.5) / copyHeight) + 2);
+        const neededHeight = containerDimensions.height * 1.4 + copyHeight;
+        const copies = Math.max(2, Math.min(3, Math.ceil(neededHeight / copyHeight)));
         return { unitLength: copyHeight, copies };
       });
     }
@@ -358,69 +360,6 @@ const DriftWall = ({
     [tileWidth, tileHeight, gap, radius, perspective, lift, dim, grayscale, style]
   );
 
-  const renderTile = (item, id, trackIndex, itemIndex) => {
-    const imgSrc = item.image || item.thumb || item.url;
-    const cat = item.category || 'Event';
-    const title = item.title || 'ACES Moment';
-
-    const inner = (
-      <span className="drift-wall__inner">
-        {/* Real Image */}
-        <img
-          src={imgSrc}
-          alt={title}
-          loading="eager"
-          decoding="async"
-          draggable={false}
-          className="drift-wall__img"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
-
-        {/* Fallback Graphic Card if Image is loading / offline */}
-        <span className="drift-wall__fallback-card">
-          <span className="drift-wall__fallback-icon">📸</span>
-          <span className="drift-wall__fallback-cat">{cat}</span>
-          <span className="drift-wall__fallback-title">{title}</span>
-        </span>
-
-        {/* Bottom Title Bar Overlay */}
-        <span className="drift-wall__badge-bar">
-          <span className="drift-wall__badge-tag">{cat}</span>
-          <span className="drift-wall__badge-title">{title}</span>
-        </span>
-      </span>
-    );
-
-    const commonProps = {
-      className: `drift-wall__tile${activeId === id ? ' is-active' : ''}`,
-      'data-tile-id': id,
-      'data-track': trackIndex,
-      onFocus: () => activate(id, trackIndex),
-      onBlur: release,
-      onClick: () => {
-        if (onItemClick) {
-          onItemClick(item, itemIndex);
-        }
-      }
-    };
-
-    if (item.href) {
-      return (
-        <a key={id} href={item.href} target="_blank" rel="noreferrer noopener" {...commonProps}>
-          {inner}
-        </a>
-      );
-    }
-
-    return (
-      <div key={id} tabIndex={0} role="button" aria-label={title} {...commonProps}>
-        {inner}
-      </div>
-    );
-  };
-
   const rootClass = [
     'drift-wall',
     isHorizontal ? 'drift-wall--horizontal' : 'drift-wall--vertical',
@@ -446,14 +385,25 @@ const DriftWall = ({
       <div ref={planeRef} className="drift-wall__plane">
         {trackItems.map((trackList, t) => {
           const meta = trackMeta[t];
-          const copies = Array.from({ length: meta?.copies || 3 });
+          const copies = Array.from({ length: meta?.copies || 2 });
           return (
             <div className={isHorizontal ? 'drift-wall__row' : 'drift-wall__col'} key={`track-${t}`}>
               <div className="drift-wall__track" ref={el => (trackRefs.current[t] = el)}>
                 {copies.map((_, copyIndex) =>
-                  trackList.map((item, itemIndex) =>
-                    renderTile(item, `${t}-${copyIndex}-${itemIndex}`, t, itemIndex)
-                  )
+                  trackList.map((item, itemIndex) => (
+                    <DriftTile
+                      key={`${t}-${copyIndex}-${itemIndex}`}
+                      item={item}
+                      id={`${t}-${copyIndex}-${itemIndex}`}
+                      trackIndex={t}
+                      itemIndex={itemIndex}
+                      copyIndex={copyIndex}
+                      activeId={activeId}
+                      activate={activate}
+                      release={release}
+                      onItemClick={onItemClick}
+                    />
+                  ))
                 )}
               </div>
             </div>
@@ -463,5 +413,92 @@ const DriftWall = ({
     </div>
   );
 };
+
+const DriftTile = memo(function DriftTile({
+  item,
+  id,
+  trackIndex,
+  itemIndex,
+  copyIndex,
+  activeId,
+  activate,
+  release,
+  onItemClick
+}) {
+  const [loaded, setLoaded] = useState(false);
+  const cat = item.category || 'Event';
+  const title = item.title || 'ACES Moment';
+
+  // PRIORITY: thumbWebp -> thumb -> imageWebp -> image -> url
+  const webpSrc = item.thumbWebp;
+  const fallbackSrc = item.thumb || item.image || item.url;
+  // First copy's first 8 items per row are in initial viewport on page load
+  const isPriority = copyIndex === 0 && itemIndex < 8;
+
+  const inner = (
+    <span className="drift-wall__inner">
+      {/* Sleek Skeleton Pulse while image downloads */}
+      {!loaded && <span className="drift-wall__skeleton" />}
+
+      {/* Picture tag with WebP + fallback */}
+      <picture className="w-full h-full">
+        {webpSrc && <source srcSet={webpSrc} type="image/webp" />}
+        <img
+          src={fallbackSrc}
+          alt={title}
+          loading={isPriority ? "eager" : "lazy"}
+          decoding="async"
+          fetchPriority={isPriority ? "high" : "low"}
+          draggable={false}
+          className={`drift-wall__img ${loaded ? 'is-loaded' : ''}`}
+          onLoad={() => setLoaded(true)}
+          onError={(e) => {
+            e.currentTarget.style.display = 'none';
+          }}
+        />
+      </picture>
+
+      {/* Fallback Graphic Card if Image fails to load */}
+      <span className="drift-wall__fallback-card">
+        <span className="drift-wall__fallback-icon">📸</span>
+        <span className="drift-wall__fallback-cat">{cat}</span>
+        <span className="drift-wall__fallback-title">{title}</span>
+      </span>
+
+      {/* Bottom Title Bar Overlay */}
+      <span className="drift-wall__badge-bar">
+        <span className="drift-wall__badge-tag">{cat}</span>
+        <span className="drift-wall__badge-title">{title}</span>
+      </span>
+    </span>
+  );
+
+  const commonProps = {
+    className: `drift-wall__tile${activeId === id ? ' is-active' : ''}`,
+    'data-tile-id': id,
+    'data-track': trackIndex,
+    onFocus: () => activate(id, trackIndex),
+    onBlur: release,
+    onClick: () => {
+      if (onItemClick) {
+        onItemClick(item, itemIndex);
+      }
+    }
+  };
+
+  if (item.href) {
+    return (
+      <a href={item.href} target="_blank" rel="noreferrer noopener" {...commonProps}>
+        {inner}
+      </a>
+    );
+  }
+
+  return (
+    <div tabIndex={0} role="button" aria-label={title} {...commonProps}>
+      {inner}
+    </div>
+  );
+});
 
 export default DriftWall;

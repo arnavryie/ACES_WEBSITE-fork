@@ -190,12 +190,17 @@ export default function GoldenMoments({ embedded = false, autoScroll = true, aut
 
                     {/* Bottom Arched Window Cutout Image (Full rounded corners & clean smooth display) */}
                     <div className="w-full flex-1 min-h-[280px] sm:min-h-[330px] lg:min-h-[380px] rounded-t-[180px] sm:rounded-t-[200px] rounded-b-[20px] overflow-hidden border border-muted/30 shadow-md relative mt-3 bg-light-tint group">
-                      <img
-                        src={moment.image}
-                        alt={moment.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        draggable={false}
-                      />
+                      <picture className="w-full h-full">
+                        {moment.imageWebp && <source srcSet={moment.imageWebp} type="image/webp" />}
+                        <img
+                          src={moment.image}
+                          alt={moment.title}
+                          loading={isCenter ? "eager" : "lazy"}
+                          decoding="async"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          draggable={false}
+                        />
+                      </picture>
                     </div>
                   </motion.div>
                 );
